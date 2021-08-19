@@ -30,6 +30,13 @@ The installation of this project requires [composer](https://getcomposer.org)
   service nginx restart
   ```
 
+### You can alternatively use PHP's built-in server
+```
+cd ict-expenses-management
+php artisan serve
+```
+And all your requests should be sent to [http://localhost:8000](http://localhost:8000)
+
 
 ## Usage 
 ### List expenses
