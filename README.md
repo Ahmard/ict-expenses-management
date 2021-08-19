@@ -29,3 +29,49 @@ The installation of this project requires [composer](https://getcomposer.org)
   ```
   service nginx restart
   ```
+
+
+## Usage 
+### List expenses
+Send **GET** request to **/api/expenses** endpoint
+
+### Create expenses
+Send **POST** request to **/api/expenses** endpoint with following json-payload
+```json
+{
+    "user": 1,
+    "reason" : "Your expense reason",
+    "value": "Your expense value",
+    "date": "YYYY-MM-DD"
+}
+```
+
+If your expense is created, you'll receive something like 
+```json
+{
+    "success": true,
+    "status": 200,
+    "data": {
+        "user": 1,
+        "reason": "Fri",
+        "value": 2384,
+        "date": "2021-08-19",
+        "updated_at": "2021-08-19T11:44:27.000000Z",
+        "created_at": "2021-08-19T11:44:27.000000Z",
+        "expense_id": 8
+    }
+}
+```
+
+In case of any validation error, you'll receive response similar to below
+```json
+{
+    "success": false,
+    "status": 500,
+    "data": {
+        "reason": [
+            "The reason must be at least 3 characters."
+        ]
+    }
+}
+```

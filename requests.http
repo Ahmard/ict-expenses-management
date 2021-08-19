@@ -3,7 +3,7 @@ Content-Type: application/json
 
 {
     "user": 1,
-    "reason" : "Fi",
+    "reason" : "Fri",
     "value" : 2384,
     "date": "2021-08-19"
 }
