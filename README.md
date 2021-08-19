@@ -82,3 +82,8 @@ In case of any validation error, you'll receive response similar to below
     }
 }
 ```
+
+## Testing the application
+```
+php artisan test
+```
