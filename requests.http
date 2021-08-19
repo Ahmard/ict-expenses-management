@@ -1,0 +1,14 @@
+POST http://localhost:8000/api/expenses
+Content-Type: application/json
+
+{
+    "user": 1,
+    "reason" : "Fi",
+    "value" : 2384,
+    "date": "2021-08-19"
+}
+
+###
+http://localhost:8000/api/expenses
+
+
